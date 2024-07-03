@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  name: DMS DEV
 
 variables:
   solution: '**/*.sln'
@@ -34,6 +34,6 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    command: dotnet pack
+    command: msbuild -t:pack
     packagesToPack: '**/*.csproj'
     packDestination: '$(Build.ArtifactStagingDirectory)'
