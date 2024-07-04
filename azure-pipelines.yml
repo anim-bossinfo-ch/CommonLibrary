@@ -1,0 +1,63 @@
+# .NET Desktop
+# Build and run tests for .NET Desktop or Windows classic desktop solutions.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
+
+trigger:
+- main
+
+pool:
+  name: DMS DEV
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  Major: '1'
+  Minor: '0'
+  Patch: '0'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  env:
+     NUGET_ENABLE_LEGACY_CSPROJ_PACK: 'true'
+  inputs:
+    command: pack
+    packagesToPack: '**/*.csproj'
+    packDestination: '$(Build.ArtifactStagingDirectory)'
+
+# - task: DotNetCoreCLI@2
+#   inputs:
+#     command: pack
+#     versioningScheme: off
+#     majorVersion: '$(Major)'
+#     minorVersion: '$(Minor)'
+#     patchVersion: '$(Patch)'
+
+# - task: NuGetAuthenticate@1
+#   displayName: 'NuGet Authenticate'
+
+# - task: NuGetCommand@2
+#   displayName: 'NuGet push'
+#   inputs:
+#     command: push
+#     publishVstsFeed: 'fa42920a-372d-4b13-b55e-e59cd2f6cbdf'
+#     allowPackageConflicts: true
