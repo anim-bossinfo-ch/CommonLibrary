@@ -35,20 +35,29 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  env:
+     NUGET_ENABLE_LEGACY_CSPROJ_PACK: 'true'
   inputs:
     command: pack
-    versioningScheme: off
-    majorVersion: '$(Major)'
-    minorVersion: '$(Minor)'
-    patchVersion: '$(Patch)'
+    packagesToPack: '**/*.csproj'
+    packDestination: '$(Build.ArtifactStagingDirectory)'
 
-- task: NuGetAuthenticate@1
-  displayName: 'NuGet Authenticate'
+# - task: DotNetCoreCLI@2
+#   inputs:
+#     command: pack
+#     versioningScheme: off
+#     majorVersion: '$(Major)'
+#     minorVersion: '$(Minor)'
+#     patchVersion: '$(Patch)'
 
-- task: NuGetCommand@2
-  displayName: 'NuGet push'
-  inputs:
-    command: push
-    publishVstsFeed: 'fa42920a-372d-4b13-b55e-e59cd2f6cbdf'
-    allowPackageConflicts: true
+# - task: NuGetAuthenticate@1
+#   displayName: 'NuGet Authenticate'
+
+# - task: NuGetCommand@2
+#   displayName: 'NuGet push'
+#   inputs:
+#     command: push
+#     publishVstsFeed: 'fa42920a-372d-4b13-b55e-e59cd2f6cbdf'
+#     allowPackageConflicts: true
