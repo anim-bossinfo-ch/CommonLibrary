@@ -38,5 +38,13 @@
   <ItemGroup>
     <PackageReference Include="NLog" Version="5.3.2" />
   </ItemGroup>
-  <PropertyGroup />
+  <PropertyGroup>
+    <PackageId>BossInfo.Dms.CommonLibrary</PackageId>
+    <Title>BossInfo.Dms.CommonLibrary</Title>
+    <Authors>BossInfo.Dms</Authors>
+    <Company>BossInfo.Dms</Company>
+    <Product>BossInfo.Dms.CommonLibrary</Product>
+    <AssemblyName>BossInfo.Dms.CommonLibrary</AssemblyName>
+    <Copyright>bossinfo.ch AG</Copyright>
+  </PropertyGroup>
 </Project>
