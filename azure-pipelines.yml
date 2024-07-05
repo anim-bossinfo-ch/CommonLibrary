@@ -13,9 +13,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  Major: '1'
-  Minor: '0'
-  Patch: '0'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -43,14 +40,6 @@ steps:
     command: pack
     packagesToPack: '**/*.csproj'
     packDestination: '$(Build.ArtifactStagingDirectory)'
-
-# - task: DotNetCoreCLI@2
-#   inputs:
-#     command: pack
-#     versioningScheme: off
-#     majorVersion: '$(Major)'
-#     minorVersion: '$(Minor)'
-#     patchVersion: '$(Patch)'
 
 - task: NuGetAuthenticate@1
   displayName: 'NuGet Authenticate'
