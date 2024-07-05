@@ -2,11 +2,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <RootNamespace>Library</RootNamespace>
-    <SccProjectName>Svn</SccProjectName>
-    <SccLocalPath>Svn</SccLocalPath>
-    <SccAuxPath>Svn</SccAuxPath>
-    <SccProvider>SubversionScc</SccProvider>
+    <RootNamespace>$(AssemblyName)</RootNamespace>
+    <SccProjectName></SccProjectName>
+    <SccLocalPath></SccLocalPath>
+    <SccAuxPath></SccAuxPath>
+    <SccProvider></SccProvider>
     <AssemblyOriginatorKeyFile>..\..\Keys\Key.snk</AssemblyOriginatorKeyFile>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -39,12 +39,13 @@
     <PackageReference Include="NLog" Version="5.3.2" />
   </ItemGroup>
   <PropertyGroup>
-    <PackageId>BossInfo.Dms.CommonLibrary</PackageId>
-    <Title>BossInfo.Dms.CommonLibrary</Title>
-    <Authors>BossInfo.Dms</Authors>
-    <Company>BossInfo.Dms</Company>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Title>$(AssemblyName)</Title>
+    <Authors>bossinfo.ch AG</Authors>
+    <Company>bossinfo.ch AG</Company>
     <Product>BossInfo.Dms.CommonLibrary</Product>
     <AssemblyName>BossInfo.Dms.CommonLibrary</AssemblyName>
     <Copyright>bossinfo.ch AG</Copyright>
+    <Version>$(AssemblyVersion)</Version>
   </PropertyGroup>
 </Project>
