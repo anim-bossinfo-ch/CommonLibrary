@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Library.InteropWin32
+namespace BossInfo.Dms.CommonLibrary.InteropWin32
 {
     public static class Kernel32
     {

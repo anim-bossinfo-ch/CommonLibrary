@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class EnumHelper
     {

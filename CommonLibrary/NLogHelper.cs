@@ -1,7 +1,7 @@
 ﻿using NLog;
 using System.IO;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class NLogHelper
     {

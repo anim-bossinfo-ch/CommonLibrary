@@ -4,7 +4,7 @@ using System.Text;
 using System.Diagnostics;
 using System.IO;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public class Shell
     {

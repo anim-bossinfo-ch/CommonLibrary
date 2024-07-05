@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class StringHelper
     {

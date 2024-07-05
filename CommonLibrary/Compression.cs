@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.IO.Compression;
 
-namespace Library.Misc
+namespace BossInfo.Dms.CommonLibrary.Misc
 {
     public class Compression
     {

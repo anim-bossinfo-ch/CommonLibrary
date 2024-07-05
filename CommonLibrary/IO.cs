@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public class IO
     {

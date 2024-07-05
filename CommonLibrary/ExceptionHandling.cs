@@ -5,7 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class ExceptionHandling
     {

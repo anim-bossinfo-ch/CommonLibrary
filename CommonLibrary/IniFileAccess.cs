@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Runtime.InteropServices;
+using BossInfo.Dms.CommonLibrary.InteropWin32;
 
-using Library.InteropWin32;
-using System.Diagnostics;
-
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public class IniFileAccess
     {

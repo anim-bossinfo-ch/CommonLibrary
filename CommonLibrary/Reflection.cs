@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Library.Misc
+namespace BossInfo.Dms.CommonLibrary.Misc
 {
     public class Reflection
     {

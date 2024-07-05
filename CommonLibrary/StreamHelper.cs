@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class StreamHelper
     {

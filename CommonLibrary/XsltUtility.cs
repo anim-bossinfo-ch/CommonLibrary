@@ -1,6 +1,6 @@
 ﻿using System.Xml;
 
-namespace Library.Misc
+namespace BossInfo.Dms.CommonLibrary.Misc
 {
     public class XsltUtility
     {

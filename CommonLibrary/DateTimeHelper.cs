@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public  static class DateTimeHelper
     {

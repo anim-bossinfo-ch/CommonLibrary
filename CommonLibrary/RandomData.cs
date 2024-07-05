@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Library.Misc
+namespace BossInfo.Dms.CommonLibrary.Misc
 {
     public class RandomData
     {

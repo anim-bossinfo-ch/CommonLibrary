@@ -3,7 +3,7 @@ using System.Data;
 using System.IO;
 using System.Xml;
 
-namespace Library.Xml
+namespace BossInfo.Dms.CommonLibrary.Xml
 {
     public static class XmlUtility
     {

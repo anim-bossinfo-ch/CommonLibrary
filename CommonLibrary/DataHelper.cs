@@ -4,7 +4,7 @@ using System.Text;
 using System.Data;
 using System.Reflection;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class DataHelper
     {

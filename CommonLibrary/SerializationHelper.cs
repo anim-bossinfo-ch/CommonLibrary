@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 using System.Xml;
 using System.Text;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class SerializationHelper
     {

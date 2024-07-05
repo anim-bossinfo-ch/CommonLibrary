@@ -5,7 +5,7 @@ using System.Data;
 using System.Reflection;
 using System.Xml.Serialization;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public class CollectionHelper
     {

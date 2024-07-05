@@ -4,7 +4,7 @@ using System.Text;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace Library
+namespace BossInfo.Dms.CommonLibrary
 {
     public static class Md5Helper
     {
