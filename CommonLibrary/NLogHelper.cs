@@ -5,7 +5,7 @@ namespace BossInfo.Dms.CommonLibrary
 {
     public static class NLogHelper
     {
-        private static void EnsureNLogDirectoryExists()
+        public static void EnsureNLogDirectoryExists()
         {
             var logFileTarget = LogManager.Configuration?.FindTargetByName<NLog.Targets.FileTarget>("logfile");
             string logFileName = logFileTarget?.FileName.Render(LogEventInfo.CreateNullEvent());
